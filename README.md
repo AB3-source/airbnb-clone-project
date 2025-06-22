@@ -207,4 +207,23 @@ Security-related events such as failed login attempts, suspicious activity, and 
 **Why it's important:**  
 Allows for early detection of security threats and supports auditing and incident response.
 
+## 🚀 CI/CD Pipeline
 
+### What is CI/CD?
+
+**CI/CD (Continuous Integration and Continuous Deployment)** is a development practice that automates the process of building, testing, and deploying code. CI ensures that changes pushed to the repository are automatically tested, while CD ensures those changes can be deployed seamlessly and reliably to production.
+
+### Why It Matters for This Project
+
+In the Airbnb Clone backend, CI/CD pipelines help:
+- Detect bugs early through automated testing
+- Maintain code quality with linting and checks
+- Reduce manual work by automating deployment
+- Speed up the release cycle, ensuring fast and safe delivery of new features
+
+### Tools to Be Used
+
+- **GitHub Actions**: Automate workflows such as running tests, linting code, and deploying updates when changes are pushed.
+- **Docker**: Standardizes the environment for development, testing, and production deployments.
+- **Heroku / Render / AWS**: Can be used as target deployment platforms integrated within the CI/CD pipeline.
+- **PostgreSQL / Redis Containers**: For staging environments in Docker during testing workflows.
