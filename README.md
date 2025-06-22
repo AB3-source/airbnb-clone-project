@@ -60,3 +60,66 @@ Used to containerize the application for consistent development, testing, and de
 
 ### 🔁 CI/CD Pipelines
 Automated tools (e.g., GitHub Actions, GitLab CI) used to run tests and deploy changes reliably and efficiently whenever code is pushed.
+
+## 🗄️ Database Design
+
+Below is a high-level overview of entities, their important fields, and their relationships.
+
+### 1. **User**
+Represents guests and hosts using the platform.
+- `id`: Unique identifier
+- `name`: Full name of the user
+- `email`: Used for login and communication
+- `password`: Hashed password
+- `is_host`: Boolean to indicate if the user can list properties
+
+**Relationship**:  
+- A user can create multiple properties (if they are a host)  
+- A user can make multiple bookings and write multiple reviews  
+---
+### 2. **Property**
+Represents a rental listing created by a host.
+- `id`: Unique identifier
+- `title`: Name or description of the property
+- `location`: City or address of the property
+- `price_per_night`: Cost of staying per night
+- `host_id`: Foreign key linking to the user who owns the property
+
+**Relationship**:  
+- A property belongs to one host (user)  
+- A property can have multiple bookings and reviews  
+---
+### 3. **Booking**
+Represents a reservation made by a user for a property.
+- `id`: Unique identifier
+- `user_id`: Foreign key linking to the booking user
+- `property_id`: Foreign key linking to the booked property
+- `check_in`: Start date of the booking
+- `check_out`: End date of the booking
+
+**Relationship**:  
+- A booking is made by one user for one property  
+- Each booking can be linked to a payment  
+---
+### 4. **Review**
+Represents user feedback on a property.
+- `id`: Unique identifier
+- `user_id`: Foreign key linking to the reviewer
+- `property_id`: Foreign key linking to the reviewed property
+- `rating`: Numerical score (e.g., 1–5)
+- `comment`: Textual review
+
+**Relationship**:  
+- A review is written by a user for a specific property  
+---
+### 5. **Payment**
+Represents a transaction made for a booking.
+- `id`: Unique identifier
+- `booking_id`: Foreign key linking to the associated booking
+- `amount`: Total amount paid
+- `payment_method`: e.g., credit card, PayPal
+- `status`: Payment status (e.g., paid, pending, failed)
+
+**Relationship**:  
+- A payment is linked to one booking  
+- A booking may have one associated payment
