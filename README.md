@@ -149,3 +149,62 @@ All RESTful and GraphQL APIs are documented using the OpenAPI standard. Clear do
 ### 7. Database Optimization
 Incorporates indexing, caching (via Redis), and asynchronous task handling (via Celery) to boost performance, especially as the platform scales.
 
+## 🔐 API Security
+
+To ensure the protection of sensitive user data, financial transactions, and system integrity, the following measures will be implemented across the application:
+
+### 1. Authentication
+All endpoints will be secured using token-based authentication (e.g., JWT). This ensures that only verified users can access protected resources, reducing the risk of unauthorized access.
+
+**Why it's important:**  
+Protects user accounts and prevents identity theft or data breaches.
+
+---
+
+### 2. Authorization
+Role-based access control (RBAC) will be implemented to define what actions users (e.g., guests vs. hosts) are allowed to perform. For example, only property owners should be able to edit their listings.
+
+**Why it's important:**  
+Prevents users from accessing or modifying resources they don’t own or shouldn’t interact with.
+
+---
+
+### 3. Rate Limiting & Throttling
+APIs will enforce rate limits to prevent abuse such as brute-force attacks, spamming endpoints, or overloading the server.
+
+**Why it's important:**  
+Helps mitigate denial-of-service attacks and ensures fair use of system resources.
+
+---
+
+### 4. Input Validation & Sanitization
+All user inputs will be validated and sanitized to protect against SQL injection, XSS, and other common web vulnerabilities.
+
+**Why it's important:**  
+Ensures data integrity and protects the database from malicious input.
+
+---
+
+### 5. Secure Payment Integration
+All payment processes will be handled through secure and compliant payment gateways (e.g., Stripe, PayPal), ensuring encryption and transaction safety.
+
+**Why it's important:**  
+Protects financial data and ensures compliance with industry standards like PCI DSS.
+
+---
+
+### 6. HTTPS & Secure Headers
+All communication with the API will occur over HTTPS, and responses will include secure HTTP headers (e.g., CORS, Content Security Policy).
+
+**Why it's important:**  
+Protects data in transit from being intercepted or manipulated.
+
+---
+
+### 7. Logging and Monitoring
+Security-related events such as failed login attempts, suspicious activity, and system errors will be logged and monitored.
+
+**Why it's important:**  
+Allows for early detection of security threats and supports auditing and incident response.
+
+
