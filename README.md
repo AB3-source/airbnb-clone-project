@@ -123,3 +123,29 @@ Represents a transaction made for a booking.
 **Relationship**:  
 - A payment is linked to one booking  
 - A booking may have one associated payment
+
+## 🧩 Feature Breakdown
+
+Core features of the Airbnb Clone backend and how each one contributes to delivering a seamless user experience.
+
+### 1. User Management
+Allows users to register, log in, update their profiles, and manage their account settings. This feature is essential for authenticating users and tracking their activity across the platform.
+
+### 2. Property Management
+Enables hosts to create, update, and delete property listings. Each property includes details such as title, location, price, and description, forming the core of the platform’s rental inventory.
+
+### 3. Booking System
+Allows users to book available properties by selecting check-in/check-out dates and submitting requests. It also supports booking management and conflict prevention through date validations.
+
+### 4. Payment Processing
+Facilitates secure payment transactions for confirmed bookings. It integrates with external payment providers and logs transaction details to ensure financial traceability.
+
+### 5. Review System
+Lets users leave ratings and written feedback for properties they have stayed at. This feature helps build trust among users and provides hosts with valuable insights.
+
+### 6. API Documentation
+All RESTful and GraphQL APIs are documented using the OpenAPI standard. Clear documentation ensures easy integration for frontend developers and third-party services.
+
+### 7. Database Optimization
+Incorporates indexing, caching (via Redis), and asynchronous task handling (via Celery) to boost performance, especially as the platform scales.
+
