@@ -34,3 +34,29 @@ Handles the infrastructure and deployment pipeline. Sets up Docker containers, C
 
 ### 🧪 QA Engineer
 Tests the functionality and reliability of the backend services. Writes and executes test cases, identifies bugs, verifies bug fixes, and ensures APIs meet performance and reliability standards.
+
+## ⚙️ Technology Stack
+
+### 🧩 Django
+A high-level Python web framework used to build the core backend system, manage URL routing, handle requests/responses, and structure the app into reusable components.
+
+### 🔗 Django REST Framework (DRF)
+A powerful and flexible toolkit for building Web APIs in Django. It simplifies the process of creating CRUD operations and handling serialization, authentication, and permissions.
+
+### 🔍 GraphQL
+A query language for APIs that enables clients to request exactly the data they need. It provides flexibility and efficiency, especially for frontend integrations.
+
+### 🐘 PostgreSQL
+A powerful, open-source relational database used to store structured data such as users, properties, bookings, payments, and reviews.
+
+### 🧵 Celery
+An asynchronous task queue used for handling background tasks like sending notifications, processing payments, or sending confirmation emails.
+
+### 🧠 Redis
+An in-memory data store used for caching and managing Celery task queues, improving performance and reducing database load.
+
+### 📦 Docker
+Used to containerize the application for consistent development, testing, and deployment across all environments.
+
+### 🔁 CI/CD Pipelines
+Automated tools (e.g., GitHub Actions, GitLab CI) used to run tests and deploy changes reliably and efficiently whenever code is pushed.
